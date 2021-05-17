@@ -1,0 +1,49 @@
+[package]
+name = "warp-wiki"
+version = "0.1.0"
+authors = ["Luck <330955133@qq.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+# https://lib.rs/crates/https_demo
+warp = { version = "0.3.1", features = ["tls"] }
+#warp = { version = "0.3.1", features = ["compression","default","tls","websocket"] }
+#warp = "0.3.1"
+#warp-sessions = "1.0.14"
+
+# json  serializing and deserializing 
+serde = {version = "1.0.125", features = ["derive"] }
+serde_derive = "1.0.125"
+serde_json = "1.0.64"
+
+# 模板-隔离RUST和HTML
+#handlebars = "3.5.4"
+
+# diesel是Rust的ORM(对象关系映射器)和查询构建器
+# diesel为PostgreSQL、Mysql及SQLite提供了开箱即用的支持
+diesel = { version="1.4.6",features=["extras","postgres","r2d2"] }
+# 加载环境配置文件.env
+dotenv = "0.15.0"
+
+# 错误处理
+#thiserror = "1.0.24"
+
+# 时间与日期
+chrono = { version = "0.4.19", features = ["serde"] }
+
+# postgres数据库,用diesel集成的r2d2，不再单独使用这个
+#mobc-postgres = { version = "0.7.0", features = ["with-chrono-0_4"] }
+#mobc = "0.7.1"
+
+# 声明惰性评估静态的宏
+#lazy_static = "1.4.0"
+
+# toml文件加载
+#toml = "0.5.8"
+
+log = "0.4.14"
+bcrypt = "0.9.0"
+rand = "0.8.3"

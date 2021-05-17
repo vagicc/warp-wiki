@@ -1,0 +1,7 @@
+-- 测试表linksnap
+CREATE TABLE linksnap (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR NOT NULL,
+    url TEXT NOT NULL,
+    added TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
