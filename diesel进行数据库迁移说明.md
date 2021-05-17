@@ -31,6 +31,8 @@ Running migration 2021-05-13-071702_admins
 elapse@elapse-PC:/luck/Language/Rust/warp-wiki$
 命令执行完后，会在数据库中生成表，同时在项目中生成src/schema.rs文件。
 
+
+迁移时执行：diesel setup
 -----------------------------------------------------------------------------------------------
 同时会在src/schema.rs中添加相应的(table!宏)表结构.
 手动在src/models.rs中添加模型：
